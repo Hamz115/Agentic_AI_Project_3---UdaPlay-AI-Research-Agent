@@ -78,8 +78,11 @@ class LLM:
                 total_tokens=response.usage.total_tokens
             )
 
+        parsed = getattr(message, "parsed", None)
+        content = parsed.model_dump_json() if parsed is not None else message.content
+
         return AIMessage(
-            content=message.content,
+            content=content,
             tool_calls=message.tool_calls,
             token_usage=token_usage
         )
