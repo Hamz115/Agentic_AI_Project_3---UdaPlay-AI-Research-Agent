@@ -1,0 +1,27 @@
+# Secrets / local config
+.env
+config.env
+*.key
+*.pem
+# Python / notebooks
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+# Generated local artifacts
+chromadb/
+chroma_db*/
+*.sqlite3
+*.db
+.cache/
+submission/
+*.zip
+# Local study / planning assets
+Logs/
+LOCAL_PROJECT_NOTES.md
+project-requirements.md
+project-study.md
+project-study.html
+*.study.md
+*.study.html
